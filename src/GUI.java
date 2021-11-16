@@ -36,15 +36,17 @@ public class GUI extends JFrame{
 		setJMenuBar(menuBar);
 
 		Font mono = new Font("Monospaced", Font.PLAIN, 13);
+
 		instructionList = new JList();
+		registerList = new JList();
+		memoryList = new JList();
+
 		instructionList.setFont(mono);
 		JScrollPane instructionPane = new JScrollPane(instructionList);
 		JPanel leftPanel = new JPanel(new BorderLayout());
 		leftPanel.add(instructionPane);
-
-		registerList = new JList();
+		
 		registerList.setFont(mono);
-		memoryList = new JList();
 		memoryList.setFont(mono);
 
 		JScrollPane registerPane = new JScrollPane(registerList);
@@ -67,9 +69,14 @@ public class GUI extends JFrame{
 
 		JMenu exec = new JMenu("Executar");
 		menubar.add(exec);
-
 		JMenuItem stepButton = new JMenuItem("Proximo Passo");
 		exec.add(stepButton);
+		JMenuItem runButton = new JMenuItem("Executar Tudo");
+		exec.add(runButton);
+		JMenuItem stopButton = new JMenuItem("Parar / Salvar");
+		exec.add(stopButton);
+		JMenuItem resetButton = new JMenuItem("Resetar Passos");
+		exec.add(resetButton);
 
 		final JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
 
@@ -104,17 +111,12 @@ public class GUI extends JFrame{
 		pcPane.setEditable(false);
 		pcPane.setOpaque(false);
 
-		JButton runButton = new JButton("EXECUTAR TUDO");
-		JButton stopButton = new JButton("PARAR/SALVAR");
-		JButton resetButton = new JButton("RESETAR");
 		JPanel botPanel = new JPanel();
 		hexBox = new JCheckBox("HEXADECIMAIS");
+		JLabel infoText = new JLabel("Informações:");
 
+		botPanel.add(infoText);
 		botPanel.add(pcPane);
-		//botPanel.add(stepButton);
-		//botPanel.add(runButton);
-		//botPanel.add(stopButton);
-		//botPanel.add(resetButton);
 		//botPanel.add(hexBox);
 		fileMenu.add(eMenuItem);
 		menuBar.add(fileMenu);
@@ -132,6 +134,15 @@ public class GUI extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				listener.onRun();
+
+				new java.util.Timer().schedule(
+					new java.util.TimerTask(){
+						@Override
+						public void run() {
+							listener.onStop();
+						}
+					}, 1000);
+
 			}
 		});
 
@@ -167,7 +178,7 @@ public class GUI extends JFrame{
 		frame = new JFrame("MIPS Simulator");
 		frame.add(leftPanel, BorderLayout.CENTER);
 		frame.add(rightPanel, BorderLayout.EAST);
-		frame.add(botPanel, BorderLayout.SOUTH);
+		frame.add(botPanel, BorderLayout.NORTH);
 		frame.setSize(1280, 720);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
