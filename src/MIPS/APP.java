@@ -105,582 +105,135 @@ public class APP extends javax.swing.JFrame {
     private void initComponents() {
 
         south = new javax.swing.JPanel();
-        datapath = new javax.swing.JPanel();
+        memory = new javax.swing.JPanel();
+        counter_l = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        memoryscrl = new javax.swing.JScrollPane();
+        mempanal = new javax.swing.JPanel();
+        registers = new javax.swing.JPanel();
+        $0 = new javax.swing.JLabel();
+        $0s = new javax.swing.JLabel();
+        $at = new javax.swing.JLabel();
+        $ats = new javax.swing.JLabel();
+        $v0 = new javax.swing.JLabel();
+        $v0s = new javax.swing.JLabel();
+        $v1 = new javax.swing.JLabel();
+        $v1s = new javax.swing.JLabel();
+        $a0 = new javax.swing.JLabel();
+        $a0s = new javax.swing.JLabel();
+        $a1 = new javax.swing.JLabel();
+        $a1s = new javax.swing.JLabel();
+        $a2 = new javax.swing.JLabel();
+        $a2s = new javax.swing.JLabel();
+        $a3 = new javax.swing.JLabel();
+        $a3s = new javax.swing.JLabel();
+        $t0 = new javax.swing.JLabel();
+        $t0s = new javax.swing.JLabel();
+        $t1 = new javax.swing.JLabel();
+        $t1s = new javax.swing.JLabel();
+        $t2 = new javax.swing.JLabel();
+        $t2s = new javax.swing.JLabel();
+        $t3 = new javax.swing.JLabel();
+        $t3s = new javax.swing.JLabel();
+        $t4 = new javax.swing.JLabel();
+        $t4s = new javax.swing.JLabel();
+        $t5 = new javax.swing.JLabel();
+        $t5s = new javax.swing.JLabel();
+        $t6 = new javax.swing.JLabel();
+        $t6s = new javax.swing.JLabel();
+        $t7 = new javax.swing.JLabel();
+        $t7s = new javax.swing.JLabel();
+        $s0 = new javax.swing.JLabel();
+        $s0s = new javax.swing.JLabel();
+        $s1 = new javax.swing.JLabel();
+        $s1s = new javax.swing.JLabel();
+        $s2 = new javax.swing.JLabel();
+        $s2s = new javax.swing.JLabel();
+        $s3 = new javax.swing.JLabel();
+        $s3s = new javax.swing.JLabel();
+        $s4 = new javax.swing.JLabel();
+        $s4s = new javax.swing.JLabel();
+        $s5 = new javax.swing.JLabel();
+        $s5s = new javax.swing.JLabel();
+        $s6 = new javax.swing.JLabel();
+        $s6s = new javax.swing.JLabel();
+        $s7 = new javax.swing.JLabel();
+        $s7s = new javax.swing.JLabel();
+        $t8 = new javax.swing.JLabel();
+        $t8s = new javax.swing.JLabel();
+        $t9 = new javax.swing.JLabel();
+        $t9s = new javax.swing.JLabel();
+        $k0 = new javax.swing.JLabel();
+        $k0s = new javax.swing.JLabel();
+        $k1 = new javax.swing.JLabel();
+        $k1s = new javax.swing.JLabel();
+        $gp = new javax.swing.JLabel();
+        $gps = new javax.swing.JLabel();
+        $sp = new javax.swing.JLabel();
+        $sps = new javax.swing.JLabel();
+        $fp = new javax.swing.JLabel();
+        $fps = new javax.swing.JLabel();
+        $ra = new javax.swing.JLabel();
+        $ras = new javax.swing.JLabel();
+        text_area = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         datapath_scrl = new javax.swing.JScrollPane();
         datapath_values = new javax.swing.JPanel();
-        rf_rf = new JLabel();
-        op_code_l = new JLabel();
-        rs = new JLabel();
-        rs_l = new JLabel();
-        bit16 = new JLabel();
-        rt_l = new JLabel();
-        func = new JLabel();
-        rd_l = new JLabel();
-        read_data1 = new JLabel();
-        shamt_l = new JLabel();
-        shamt = new JLabel();
-        funct_l = new JLabel();
-        bit32_rd2shamt_mux = new JLabel();
-        pc_output_l = new JLabel();
-        zerofalg = new JLabel();
-        pc_adder_output_l = new JLabel();
-        alu_mem_mux = new JLabel();
-        write_data_rf_l = new JLabel();
-        jr_mux = new JLabel();
-        read_data1_l = new JLabel();
-        bit32_sl2 = new JLabel();
-        read_data2_l = new JLabel();
-        branch_mux = new JLabel();
-        alu_input1_l = new JLabel();
-        pcoutput = new JLabel();
-        alu_input2_l = new JLabel();
-        jumb_add = new JLabel();
-        alu_output_l = new JLabel();
-        ctr_jump = new JLabel();
-        mem_address_l = new JLabel();
-        ctr_memread = new JLabel();
-        mem_write_data_l = new JLabel();
-        ctr_aluop = new JLabel();
-        zero_flag_l = new JLabel();
-        ctr_alusrc = new JLabel();
-        and_gate_l = new JLabel();
-        ctr_pcsrc = new JLabel();
-        branch_adder_input1_l = new JLabel();
-        ctr_jreg = new JLabel();
-        branch_adder_input2_l = new JLabel();
-        opcode1 = new JLabel();
-        branch_adder_output_l = new JLabel();
-        rt1 = new JLabel();
-        signextend_input_l = new JLabel();
-        regdstmux1 = new JLabel();
-        signextend_output_l = new JLabel();
-        bit33 = new JLabel();
-        alu_control_l = new JLabel();
-        read_data4 = new JLabel();
-        jr_mux_l = new JLabel();
-        rd2_shamt_mux1 = new JLabel();
-        rd_mux_l = new JLabel();
-        aluout1 = new JLabel();
-        shamt_mux_l = new JLabel();
-        memoutput1 = new JLabel();
-        alu_src_mux_l = new JLabel();
-        jal_mux1 = new JLabel();
-        alu_mem_mux_l = new JLabel();
-        andgate1 = new JLabel();
-        jal_mux_l = new JLabel();
-        branch_adder1 = new JLabel();
-        branch_mux_l = new JLabel();
-        jumb_mux1 = new JLabel();
-        ctr_regDest_l = new JLabel();
-        pcp5 = new JLabel();
-        ctr_regWrite_l = new JLabel();
-        ctr_regdst1 = new JLabel();
-        ctr_aluSrc_l = new JLabel();
-        ctr_branch1 = new JLabel();
-        ctr_aluOp_l = new JLabel();
-        ctr_memreg1 = new JLabel();
-        ctr_branch_l = new JLabel();
-        ctr_memwrite1 = new JLabel();
-        ctr_memRead_l = new JLabel();
-        ctr_regwrite1 = new JLabel();
-        ctr_memWrite_l = new JLabel();
-        ctr_shiftlogic1 = new JLabel();
-        ctr_memToReg_l = new JLabel();
-        jLabel1 = new JLabel();
-        ctr_jump_l = new JLabel();
-        jLabel3 = new JLabel();
-        ctr_jal_l = new JLabel();
-        jLabel5 = new JLabel();
-        ctr_jr_l = new JLabel();
-        jLabel6 = new JLabel();
-        ctr_shiftLogic_l = new JLabel();
-        counter_l = new JLabel();
+        rf_rf = new javax.swing.JLabel();
+        op_code_l = new javax.swing.JLabel();
+        rs = new javax.swing.JLabel();
+        rs_l = new javax.swing.JLabel();
+        bit16 = new javax.swing.JLabel();
+        rt_l = new javax.swing.JLabel();
+        func = new javax.swing.JLabel();
+        rd_l = new javax.swing.JLabel();
+        shamt = new javax.swing.JLabel();
+        funct_l = new javax.swing.JLabel();
+        bit32_rd2shamt_mux = new javax.swing.JLabel();
+        pc_output_l = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         address_lbl = new javax.swing.JTextField();
         data_lbl = new javax.swing.JTextField();
         ADD_btn = new javax.swing.JButton();
-        memory = new javax.swing.JPanel();
-        memoryscrl = new javax.swing.JScrollPane();
-        mempanal = new javax.swing.JPanel();
-        registers = new javax.swing.JPanel();
-        $0 = new JLabel();
-        $0s = new JLabel();
-        $at = new JLabel();
-        $ats = new JLabel();
-        $v0 = new JLabel();
-        $v0s = new JLabel();
-        $v1 = new JLabel();
-        $v1s = new JLabel();
-        $a0 = new JLabel();
-        $a0s = new JLabel();
-        $a1 = new JLabel();
-        $a1s = new JLabel();
-        $a2 = new JLabel();
-        $a2s = new JLabel();
-        $a3 = new JLabel();
-        $a3s = new JLabel();
-        $t0 = new JLabel();
-        $t0s = new JLabel();
-        $t1 = new JLabel();
-        $t1s = new JLabel();
-        $t2 = new JLabel();
-        $t2s = new JLabel();
-        $t3 = new JLabel();
-        $t3s = new JLabel();
-        $t4 = new JLabel();
-        $t4s = new JLabel();
-        $t5 = new JLabel();
-        $t5s = new JLabel();
-        $t6 = new JLabel();
-        $t6s = new JLabel();
-        $t7 = new JLabel();
-        $t7s = new JLabel();
-        $s0 = new JLabel();
-        $s0s = new JLabel();
-        $s1 = new JLabel();
-        $s1s = new JLabel();
-        $s2 = new JLabel();
-        $s2s = new JLabel();
-        $s3 = new JLabel();
-        $s3s = new JLabel();
-        $s4 = new JLabel();
-        $s4s = new JLabel();
-        $s5 = new JLabel();
-        $s5s = new JLabel();
-        $s6 = new JLabel();
-        $s6s = new JLabel();
-        $s7 = new JLabel();
-        $s7s = new JLabel();
-        $t8 = new JLabel();
-        $t8s = new JLabel();
-        $t9 = new JLabel();
-        $t9s = new JLabel();
-        $k0 = new JLabel();
-        $k0s = new JLabel();
-        $k1 = new JLabel();
-        $k1s = new JLabel();
-        $gp = new JLabel();
-        $gps = new JLabel();
-        $sp = new JLabel();
-        $sps = new JLabel();
-        $fp = new JLabel();
-        $fps = new JLabel();
-        $ra = new JLabel();
-        $ras = new JLabel();
-        text_area = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         compiler = new javax.swing.JMenuItem();
         nextr = new javax.swing.JMenuItem();
         runr = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MIPS_SIM");
-        setMaximumSize(new java.awt.Dimension(1270, 820));
+        setTitle("SIMULADOR DE MIPS");
         setMinimumSize(new java.awt.Dimension(1270, 720));
-        setName("application"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1270, 740));
+        setName("application");
         setResizable(false);
 
         south.setPreferredSize(new java.awt.Dimension(500, 100));
         south.setLayout(new java.awt.GridLayout(1, 0));
 
-        datapath.setPreferredSize(new java.awt.Dimension(500, 100));
-        datapath.setLayout(new java.awt.BorderLayout());
-
-        datapath_scrl.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                datapath_scrlMouseClicked(evt);
-            }
-        });
-
-        datapath_values.setLayout(new java.awt.GridLayout(0, 2));
-
-        rf_rf.setText("OP code");
-        rf_rf.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rf_rf);
-
-        op_code_l.setText("opcode");
-        op_code_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(op_code_l);
-
-        rs.setText("Rs");
-        rs.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rs);
-
-        rs_l.setText("jLabel65");
-        rs_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rs_l);
-
-        bit16.setText("Rt");
-        bit16.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(bit16);
-
-        rt_l.setText("jLabel65");
-        rt_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rt_l);
-
-        func.setText("Rd");
-        func.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(func);
-
-        rd_l.setText("jLabel65");
-        rd_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rd_l);
-
-        read_data1.setText("Shamt");
-        read_data1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(read_data1);
-
-        shamt_l.setText("jLabel65");
-        shamt_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(shamt_l);
-
-        shamt.setText("Funct");
-        shamt.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(shamt);
-
-        funct_l.setText("jLabel65");
-        funct_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(funct_l);
-
-        bit32_rd2shamt_mux.setText("PC output");
-        bit32_rd2shamt_mux.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(bit32_rd2shamt_mux);
-
-        pc_output_l.setText("jLabel65");
-        pc_output_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(pc_output_l);
-
-        zerofalg.setText("PC adder output");
-        zerofalg.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(zerofalg);
-
-        pc_adder_output_l.setText("jLabel65");
-        pc_adder_output_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(pc_adder_output_l);
-
-        alu_mem_mux.setText("write data rf");
-        alu_mem_mux.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_mem_mux);
-
-        write_data_rf_l.setText("jLabel65");
-        write_data_rf_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(write_data_rf_l);
-
-        jr_mux.setText("read data1");
-        jr_mux.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jr_mux);
-
-        read_data1_l.setText("jLabel65");
-        read_data1_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(read_data1_l);
-
-        bit32_sl2.setText("read data2");
-        bit32_sl2.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(bit32_sl2);
-
-        read_data2_l.setText("jLabel65");
-        read_data2_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(read_data2_l);
-
-        branch_mux.setText("alu input1");
-        branch_mux.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(branch_mux);
-
-        alu_input1_l.setText("jLabel65");
-        alu_input1_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_input1_l);
-
-        pcoutput.setText("alu input2");
-        pcoutput.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(pcoutput);
-
-        alu_input2_l.setText("jLabel65");
-        alu_input2_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_input2_l);
-
-        jumb_add.setText("alu output");
-        jumb_add.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jumb_add);
-
-        alu_output_l.setText("jLabel65");
-        alu_output_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_output_l);
-
-        ctr_jump.setText("mem address");
-        ctr_jump.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_jump);
-
-        mem_address_l.setText("jLabel65");
-        mem_address_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(mem_address_l);
-
-        ctr_memread.setText("mem write data");
-        ctr_memread.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_memread);
-
-        mem_write_data_l.setText("jLabel65");
-        mem_write_data_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(mem_write_data_l);
-
-        ctr_aluop.setText("zero flag");
-        ctr_aluop.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_aluop);
-
-        zero_flag_l.setText("jLabel65");
-        zero_flag_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(zero_flag_l);
-
-        ctr_alusrc.setText("and gate output");
-        ctr_alusrc.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_alusrc);
-
-        and_gate_l.setText("jLabel65");
-        and_gate_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(and_gate_l);
-
-        ctr_pcsrc.setText("branch adder input1");
-        ctr_pcsrc.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_pcsrc);
-
-        branch_adder_input1_l.setText("jLabel65");
-        branch_adder_input1_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(branch_adder_input1_l);
-
-        ctr_jreg.setText("branch adder input2");
-        ctr_jreg.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_jreg);
-
-        branch_adder_input2_l.setText("jLabel65");
-        branch_adder_input2_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(branch_adder_input2_l);
-
-        opcode1.setText("branch adder output");
-        opcode1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(opcode1);
-
-        branch_adder_output_l.setText("jLabel65");
-        branch_adder_output_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(branch_adder_output_l);
-
-        rt1.setText("sign extend input");
-        rt1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rt1);
-
-        signextend_input_l.setText("jLabel65");
-        signextend_input_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(signextend_input_l);
-
-        regdstmux1.setText("sign extend output");
-        regdstmux1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(regdstmux1);
-
-        signextend_output_l.setText("jLabel65");
-        signextend_output_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(signextend_output_l);
-
-        bit33.setText("alu control");
-        bit33.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(bit33);
-
-        alu_control_l.setText("jLabel65");
-        alu_control_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_control_l);
-
-        read_data4.setText("jr mux output");
-        read_data4.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(read_data4);
-
-        jr_mux_l.setText("jLabel65");
-        jr_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jr_mux_l);
-
-        rd2_shamt_mux1.setText("rd mux output");
-        rd2_shamt_mux1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rd2_shamt_mux1);
-
-        rd_mux_l.setText("jLabel65");
-        rd_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(rd_mux_l);
-
-        aluout1.setText("shamt mux output");
-        aluout1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(aluout1);
-
-        shamt_mux_l.setText("jLabel65");
-        shamt_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(shamt_mux_l);
-
-        memoutput1.setText("alu src mux output");
-        memoutput1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(memoutput1);
-
-        alu_src_mux_l.setText("jLabel65");
-        alu_src_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_src_mux_l);
-
-        jal_mux1.setText("alu_mem mux output");
-        jal_mux1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jal_mux1);
-
-        alu_mem_mux_l.setText("jLabel65");
-        alu_mem_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(alu_mem_mux_l);
-
-        andgate1.setText("jal mux output");
-        andgate1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(andgate1);
-
-        jal_mux_l.setText("jLabel65");
-        jal_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jal_mux_l);
-
-        branch_adder1.setText("branch mux output");
-        branch_adder1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(branch_adder1);
-
-        branch_mux_l.setText("jLabel65");
-        branch_mux_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(branch_mux_l);
-
-        jumb_mux1.setText("ctr_regDest");
-        jumb_mux1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jumb_mux1);
-
-        ctr_regDest_l.setText("jLabel65");
-        ctr_regDest_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_regDest_l);
-
-        pcp5.setText("ctr_regWrite");
-        pcp5.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(pcp5);
-
-        ctr_regWrite_l.setText("jLabel65");
-        ctr_regWrite_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_regWrite_l);
-
-        ctr_regdst1.setText("ctr_aluSrc");
-        ctr_regdst1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_regdst1);
-
-        ctr_aluSrc_l.setText("jLabel65");
-        ctr_aluSrc_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_aluSrc_l);
-
-        ctr_branch1.setText("ctr_aluOp");
-        ctr_branch1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_branch1);
-
-        ctr_aluOp_l.setText("jLabel65");
-        ctr_aluOp_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_aluOp_l);
-
-        ctr_memreg1.setText("ctr_branch");
-        ctr_memreg1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_memreg1);
-
-        ctr_branch_l.setText("jLabel65");
-        ctr_branch_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_branch_l);
-
-        ctr_memwrite1.setText("ctr_memRead");
-        ctr_memwrite1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_memwrite1);
-
-        ctr_memRead_l.setText("jLabel65");
-        ctr_memRead_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_memRead_l);
-
-        ctr_regwrite1.setText("ctr_memWrite");
-        ctr_regwrite1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_regwrite1);
-
-        ctr_memWrite_l.setText("jLabel65");
-        ctr_memWrite_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_memWrite_l);
-
-        ctr_shiftlogic1.setText("ctr_memToReg");
-        ctr_shiftlogic1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_shiftlogic1);
-
-        ctr_memToReg_l.setText("jLabel65");
-        ctr_memToReg_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_memToReg_l);
-
-        jLabel1.setText("ctr_jump");
-        jLabel1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jLabel1);
-
-        ctr_jump_l.setText("jLabel2");
-        ctr_jump_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_jump_l);
-
-        jLabel3.setText("ctr_jal");
-        jLabel3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jLabel3);
-
-        ctr_jal_l.setText("jLabel4");
-        ctr_jal_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_jal_l);
-
-        jLabel5.setText("ctr_jr");
-        jLabel5.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jLabel5);
-
-        ctr_jr_l.setText("jLabel7");
-        ctr_jr_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_jr_l);
-
-        jLabel6.setText("ctr_shiftLogic");
-        jLabel6.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(jLabel6);
-
-        ctr_shiftLogic_l.setText("jLabel8");
-        ctr_shiftLogic_l.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        datapath_values.add(ctr_shiftLogic_l);
-
-        datapath_scrl.setViewportView(datapath_values);
-
-        datapath.add(datapath_scrl, java.awt.BorderLayout.LINE_END);
-
-        counter_l.setText("Instruction number:0");
-        datapath.add(counter_l, java.awt.BorderLayout.LINE_START);
-
-        address_lbl.setText("address");
-        address_lbl.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                address_lblActionPerformed(evt);
-            }
-        });
-        jPanel1.add(address_lbl);
-
-        data_lbl.setText("data");
-        data_lbl.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                data_lblActionPerformed(evt);
-            }
-        });
-        jPanel1.add(data_lbl);
-
-        ADD_btn.setText("ADD");
-        ADD_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ADD_btnActionPerformed(evt);
-            }
-        });
-        jPanel1.add(ADD_btn);
-
-        datapath.add(jPanel1, java.awt.BorderLayout.CENTER);
-
-        south.add(datapath);
-
         memory.setLayout(new java.awt.BorderLayout());
 
+        counter_l.setBackground(new java.awt.Color(255, 255, 255));
+        counter_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        counter_l.setText("Passos: 0");
+        counter_l.setToolTipText("");
+        counter_l.setAlignmentY(0.0F);
+        counter_l.setFocusable(false);
+        counter_l.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        counter_l.setIconTextGap(10);
+        counter_l.setInheritsPopupMenu(false);
+        counter_l.setOpaque(true);
+        memory.add(counter_l, java.awt.BorderLayout.PAGE_END);
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        memory.add(jPanel2, java.awt.BorderLayout.LINE_END);
+
+        memoryscrl.setPreferredSize(new java.awt.Dimension(200, 200));
+
+        mempanal.setBackground(new java.awt.Color(255, 255, 255));
+        mempanal.setToolTipText("");
         mempanal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mempanalMouseClicked(evt);
@@ -695,8 +248,11 @@ public class APP extends javax.swing.JFrame {
 
         getContentPane().add(south, java.awt.BorderLayout.SOUTH);
 
-        registers.setBorder(BorderFactory.createTitledBorder("Registers"));
-        registers.setPreferredSize(new java.awt.Dimension(200, 822));
+        registers.setBackground(new java.awt.Color(255, 255, 255));
+        registers.setBorder(javax.swing.BorderFactory.createTitledBorder("Registradores"));
+        registers.setAlignmentX(10.0F);
+        registers.setFocusable(false);
+        registers.setPreferredSize(new java.awt.Dimension(200, 900));
         registers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 registersMousePressed(evt);
@@ -705,408 +261,444 @@ public class APP extends javax.swing.JFrame {
         registers.setLayout(new java.awt.GridLayout(32, 2));
 
         $0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $0.setText("$0");
-        $0.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $0.setToolTipText("");
+        $0.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
+        $0.setMaximumSize(new java.awt.Dimension(22, 30));
+        $0.setMinimumSize(new java.awt.Dimension(22, 30));
+        $0.setPreferredSize(new java.awt.Dimension(22, 30));
         registers.add($0);
 
         $0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $0s.setText("0");
-        $0s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $0s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($0s);
 
         $at.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $at.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $at.setText("$at");
-        $at.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $at.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($at);
 
         $ats.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $ats.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $ats.setText("0");
-        $ats.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $ats.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($ats);
 
         $v0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $v0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v0.setText("$v0");
-        $v0.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $v0.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($v0);
 
         $v0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $v0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v0s.setText("0");
-        $v0s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $v0s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($v0s);
 
         $v1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $v1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v1.setText("$v1");
-        $v1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $v1.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($v1);
 
         $v1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $v1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v1s.setText("0");
-        $v1s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $v1s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($v1s);
 
         $a0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $a0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a0.setText("$a0");
-        $a0.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a0.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($a0);
 
         $a0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a0s.setText("0");
-        $a0s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a0s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         registers.add($a0s);
 
         $a1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $a1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a1.setText("$a1");
-        $a1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a1.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $a1.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($a1);
 
         $a1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a1s.setText("0");
-        $a1s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a1s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $a1s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($a1s);
 
         $a2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $a2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a2.setText("$a2");
-        $a2.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a2.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $a2.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($a2);
 
         $a2s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a2s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a2s.setText("0");
-        $a2s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a2s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $a2s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($a2s);
 
         $a3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $a3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a3.setText("$a3");
-        $a3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a3.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $a3.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($a3);
 
         $a3s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a3s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a3s.setText("0");
-        $a3s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $a3s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $a3s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($a3s);
 
         $t0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t0.setText("$t0");
-        $t0.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t0.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t0.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t0);
 
         $t0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t0s.setText("0");
-        $t0s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t0s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t0s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t0s);
 
         $t1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t1.setText("$t1");
-        $t1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t1.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t1.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t1);
 
         $t1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t1s.setText("0");
-        $t1s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t1s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t1s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t1s);
 
         $t2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t2.setText("$t2");
-        $t2.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t2.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t2.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t2);
 
         $t2s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t2s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t2s.setText("0");
-        $t2s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t2s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t2s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t2s);
 
         $t3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t3.setText("$t3");
-        $t3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t3.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t3.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t3);
 
         $t3s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t3s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t3s.setText("0");
-        $t3s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t3s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t3s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t3s);
 
         $t4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t4.setText("$t4");
-        $t4.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t4.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t4.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t4);
 
         $t4s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t4s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t4s.setText("0");
-        $t4s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t4s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t4s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t4s);
 
         $t5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t5.setText("$t5");
-        $t5.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t5.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t5.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t5);
 
         $t5s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t5s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t5s.setText("0");
-        $t5s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t5s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t5s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t5s);
 
         $t6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t6.setText("$t6");
-        $t6.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t6.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t6.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t6);
 
         $t6s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t6s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t6s.setText("0");
-        $t6s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t6s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t6s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t6s);
 
         $t7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t7.setText("$t7");
-        $t7.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t7.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t7.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t7);
 
         $t7s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t7s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t7s.setText("0");
-        $t7s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t7s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t7s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t7s);
 
         $s0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s0.setText("$s0");
-        $s0.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s0.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s0.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s0);
 
         $s0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s0s.setText("0");
-        $s0s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s0s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s0s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s0s);
 
         $s1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s1.setText("$s1");
-        $s1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s1.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s1.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s1);
 
         $s1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s1s.setText("0");
-        $s1s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s1s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s1s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s1s);
 
         $s2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s2.setText("$s2");
-        $s2.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s2.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s2.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s2);
 
         $s2s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s2s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s2s.setText("0");
-        $s2s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s2s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s2s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s2s);
 
         $s3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s3.setText("$s3");
-        $s3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s3.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s3.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s3);
 
         $s3s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s3s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s3s.setText("0");
-        $s3s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s3s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s3s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s3s);
 
         $s4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s4.setText("$s4");
-        $s4.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s4.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s4.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s4);
 
         $s4s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s4s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s4s.setText("0");
-        $s4s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s4s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s4s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s4s);
 
         $s5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s5.setText("$s5");
-        $s5.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s5.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s5.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s5);
 
         $s5s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s5s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s5s.setText("0");
-        $s5s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s5s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s5s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s5s);
 
         $s6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s6.setText("$s6");
-        $s6.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s6.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s6.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s6);
 
         $s6s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s6s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s6s.setText("0");
-        $s6s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s6s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s6s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s6s);
 
         $s7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $s7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s7.setText("$s7");
-        $s7.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s7.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s7.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s7);
 
         $s7s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s7s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s7s.setText("0");
-        $s7s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $s7s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $s7s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($s7s);
 
         $t8.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t8.setText("$t8");
-        $t8.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t8.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t8.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t8);
 
         $t8s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t8s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t8s.setText("0");
-        $t8s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t8s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t8s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t8s);
 
         $t9.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $t9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t9.setText("$t9");
-        $t9.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t9.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t9.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t9);
 
         $t9s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t9s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t9s.setText("0");
-        $t9s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $t9s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $t9s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($t9s);
 
         $k0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $k0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k0.setText("$k0");
-        $k0.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $k0.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $k0.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($k0);
 
         $k0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $k0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k0s.setText("0");
-        $k0s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $k0s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $k0s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($k0s);
 
         $k1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $k1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k1.setText("$k1");
-        $k1.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $k1.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $k1.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($k1);
 
         $k1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $k1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k1s.setText("0");
-        $k1s.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $k1s.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $k1s.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($k1s);
 
         $gp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $gp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $gp.setText("$gp");
-        $gp.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $gp.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $gp.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($gp);
 
         $gps.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $gps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $gps.setText("0");
-        $gps.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $gps.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $gps.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($gps);
 
         $sp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $sp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $sp.setText("$sp");
-        $sp.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $sp.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $sp.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($sp);
 
         $sps.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $sps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $sps.setText("0");
-        $sps.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $sps.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $sps.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($sps);
 
         $fp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $fp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $fp.setText("$fp");
-        $fp.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $fp.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $fp.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($fp);
 
         $fps.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $fps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $fps.setText("0");
-        $fps.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $fps.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $fps.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($fps);
 
         $ra.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        $ra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $ra.setText("$ra");
-        $ra.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $ra.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $ra.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($ra);
 
         $ras.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $ras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $ras.setText("0");
-        $ras.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)), BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        $ras.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
         $ras.setPreferredSize(new java.awt.Dimension(0, 30));
         registers.add($ras);
 
@@ -1115,7 +707,7 @@ public class APP extends javax.swing.JFrame {
         text_area.setLayout(new java.awt.BorderLayout());
 
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -1133,19 +725,157 @@ public class APP extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         text_area.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        text_area.add(jPanel3, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setMinimumSize(new java.awt.Dimension(200, 10));
+        jPanel4.setPreferredSize(new java.awt.Dimension(200, 0));
+
+        datapath_scrl.setBackground(new java.awt.Color(255, 255, 255));
+        datapath_scrl.setBorder(javax.swing.BorderFactory.createTitledBorder("Informações"));
+        datapath_scrl.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        datapath_scrl.setFocusable(false);
+        datapath_scrl.setOpaque(false);
+        datapath_scrl.setPreferredSize(new java.awt.Dimension(200, 200));
+        datapath_scrl.setWheelScrollingEnabled(false);
+        datapath_scrl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                datapath_scrlMouseClicked(evt);
+            }
+        });
+
+        datapath_values.setLayout(new java.awt.GridLayout(0, 2));
+
+        rf_rf.setBackground(new java.awt.Color(255, 255, 255));
+        rf_rf.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rf_rf.setText("OP code");
+        rf_rf.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rf_rf.setOpaque(true);
+        datapath_values.add(rf_rf);
+
+        op_code_l.setBackground(java.awt.Color.white);
+        op_code_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        op_code_l.setText("opcode");
+        op_code_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        op_code_l.setOpaque(true);
+        datapath_values.add(op_code_l);
+
+        rs.setBackground(java.awt.Color.white);
+        rs.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs.setText("Rs");
+        rs.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rs.setOpaque(true);
+        datapath_values.add(rs);
+
+        rs_l.setBackground(java.awt.Color.white);
+        rs_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rs_l.setText("jLabel65");
+        rs_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rs_l.setOpaque(true);
+        datapath_values.add(rs_l);
+
+        bit16.setBackground(java.awt.Color.white);
+        bit16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bit16.setText("Rt");
+        bit16.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        bit16.setOpaque(true);
+        datapath_values.add(bit16);
+
+        rt_l.setBackground(java.awt.Color.white);
+        rt_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rt_l.setText("jLabel65");
+        rt_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rt_l.setOpaque(true);
+        datapath_values.add(rt_l);
+
+        func.setBackground(java.awt.Color.white);
+        func.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        func.setText("Rd");
+        func.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        func.setOpaque(true);
+        datapath_values.add(func);
+
+        rd_l.setBackground(java.awt.Color.white);
+        rd_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rd_l.setText("jLabel65");
+        rd_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rd_l.setOpaque(true);
+        datapath_values.add(rd_l);
+
+        shamt.setBackground(java.awt.Color.white);
+        shamt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shamt.setText("Funct");
+        shamt.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        shamt.setOpaque(true);
+        datapath_values.add(shamt);
+
+        funct_l.setBackground(java.awt.Color.white);
+        funct_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        funct_l.setText("jLabel65");
+        funct_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        funct_l.setOpaque(true);
+        datapath_values.add(funct_l);
+
+        bit32_rd2shamt_mux.setBackground(java.awt.Color.white);
+        bit32_rd2shamt_mux.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bit32_rd2shamt_mux.setText("PC");
+        bit32_rd2shamt_mux.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        bit32_rd2shamt_mux.setOpaque(true);
+        datapath_values.add(bit32_rd2shamt_mux);
+
+        pc_output_l.setBackground(java.awt.Color.white);
+        pc_output_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pc_output_l.setText("jLabel65");
+        pc_output_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        pc_output_l.setOpaque(true);
+        datapath_values.add(pc_output_l);
+
+        datapath_scrl.setViewportView(datapath_values);
+
+        jPanel4.add(datapath_scrl);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMinimumSize(new java.awt.Dimension(20, 20));
+        jPanel1.setPreferredSize(new java.awt.Dimension(200, 80));
+
+        address_lbl.setColumns(15);
+        address_lbl.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        address_lbl.setText("Endereço");
+        address_lbl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                address_lblActionPerformed(evt);
+            }
+        });
+        jPanel1.add(address_lbl);
+
+        data_lbl.setColumns(8);
+        data_lbl.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        data_lbl.setText("Valor");
+        data_lbl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                data_lblActionPerformed(evt);
+            }
+        });
+        jPanel1.add(data_lbl);
+
+        ADD_btn.setText("Salvar");
+        ADD_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ADD_btnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ADD_btn);
+
+        jPanel4.add(jPanel1);
+
+        text_area.add(jPanel4, java.awt.BorderLayout.LINE_START);
 
         getContentPane().add(text_area, java.awt.BorderLayout.CENTER);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Actions");
+        jMenu3.setText("Opções");
 
         compiler.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, 0));
-        compiler.setText("Compile");
+        compiler.setText("Salvar");
         compiler.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 compilerMouseClicked(evt);
@@ -1159,7 +889,7 @@ public class APP extends javax.swing.JFrame {
         jMenu3.add(compiler);
 
         nextr.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, 0));
-        nextr.setText("next inst.");
+        nextr.setText("Proximo Passo");
         nextr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextrActionPerformed(evt);
@@ -1188,57 +918,10 @@ public class APP extends javax.swing.JFrame {
     this.jTextArea1.write(fileOut);
 }
     
-    private void jTextArea1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextArea1MouseExited
-
-    private void mempanalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mempanalMouseClicked
-        this.jTextArea1.setEnabled(false);
-        
-    }//GEN-LAST:event_mempanalMouseClicked
-
-    private void datapath_scrlMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_datapath_scrlMouseClicked
-                this.jTextArea1.setEnabled(false);
-                
-    }//GEN-LAST:event_datapath_scrlMouseClicked
-
-    private void jTextArea1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseClicked
-        this.jTextArea1.setEnabled(true);
-        
-    }//GEN-LAST:event_jTextArea1MouseClicked
-
     private void registersMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registersMousePressed
                 this.jTextArea1.setEnabled(false);
                 
     }//GEN-LAST:event_registersMousePressed
-
-    private void jTextArea1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextArea1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextArea1FocusLost
-
-    private void data_lblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_lblActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_data_lblActionPerformed
-
-    private void ADD_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADD_btnActionPerformed
-        // TODO add your handling code here:
-        //dm.setSP(parseBtoD(StoB(address_lbl.getText(),32)));
-        try{
-            dm.setWrite("10");
-            dm.setAddress(parseBtoD(StoB(address_lbl.getText())));
-            dm.store(StoB(data_lbl.getText()));
-            this.ADDMEMORYLABEL(dm.getAddress(), dm.getLocation());
-            this.repaint();
-        }
-        catch(Exception e){
-            address_lbl.setText("ERROR");
-            data_lbl.setText("NV");
-        }
-    }//GEN-LAST:event_ADD_btnActionPerformed
-
-    private void address_lblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_address_lblActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_address_lblActionPerformed
 
     private void runrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runrActionPerformed
         while((k<im.getI())&&k>=0){
@@ -1256,41 +939,22 @@ public class APP extends javax.swing.JFrame {
             rt_l.setText(parseBtoD(im.getRt().getBits())+"");
             rd_l.setText(parseBtoD(im.getRd().getBits())+"");
             funct_l.setText(parseBtoD(im.getFunc().getBits())+"");
-            shamt_l.setText(parseBtoD(im.getShamt().getBits())+"");
-            ctr_aluOp_l.setText(control.getALUop());
-            ctr_aluSrc_l.setText(control.getALUSrc());
-            ctr_branch_l.setText(control.getBranch());
-            ctr_jal_l.setText(control.getJumpReg());
-            ctr_jr_l.setText(control.getPCSrc());
-            ctr_jump_l.setText(control.getJump());
-            ctr_memRead_l.setText(control.getMemRead());
-            ctr_memToReg_l.setText(control.getMemToReg());
-            ctr_memWrite_l.setText(control.getMemWrite());
-            ctr_regDest_l.setText(control.getRegDst());
-            ctr_regWrite_l.setText(control.getRegWrite());
-            ctr_shiftLogic_l.setText(control.getShift());
 
             mux3.setControl(control.getRegDst());
             mux3.setInput1(im.getRt());
             mux3.setInput2(im.getRd());
-            rd_mux_l.setText(parseBtoD(mux3.getOutput().getBits())+"");
 
             rf.setControl(control.getRegWrite());
             rf.SetRegisterFile(im.getRs(), im.getRt(), mux3.getOutput());
             se.setInput(im.getThe16bit_address());
-            signextend_input_l.setText(parseBtoD(im.getThe16bit_address().getBits())+"");
 
             mux8.setControl(control.getShift());
             mux8.setInput2(im.getShamt());
             mux8.setInput1(rf.getRead2());
-            shamt_mux_l.setText(parseBtoD(mux8.getOutput().getBits())+"");
-            read_data1_l.setText(parseBtoD(rf.getRead1().getBits())+"");
-            read_data2_l.setText(parseBtoD(rf.getRead2().getBits())+"");
 
             mux4.setControl(control.getALUSrc());
             mux4.setInput1(mux8.getOutput());
             mux4.setInput2(se.getOutput());
-            alu_src_mux_l.setText(parseBtoD(mux4.getOutput().getBits())+"");
 
             //alucont.Do(control.getALUop(),BtoS(im.getFunc().getBits()));
             alucont.AluControl_ctrl(im.getFunc(), control.getALUop());
@@ -1298,16 +962,10 @@ public class APP extends javax.swing.JFrame {
             alu.setInp1(rf.getRead1());
             alu.setInp2(mux4.getOutput());
             alu.setSig(alucont.getSignal(),Parse.BtoS(im.getOpcode().getBits()));
-            alu_input1_l.setText(parseBtoD(rf.getRead1().getBits())+"");
-            alu_input2_l.setText(parseBtoD(mux4.getOutput().getBits())+"");
-            alu_control_l.setText(alucont.getSignal());
+
 
             dm.setSP(Parse.parseBtoD((rf.getReg(28).getBits())));
             int x=Parse.parseBtoD(alu.getOutput().getBits());
-            alu_output_l.setText(parseBtoD(alu.getOutput().getBits())+"");
-            mem_address_l.setText(parseBtoD(alu.getOutput().getBits())+"");
-            mem_write_data_l.setText(parseBtoD(rf.getRead2().getBits())+"");
-            zero_flag_l.setText(alu.getZeroFlag()+"");
             dm.setAddress(x);
             dm.setRead(control.getMemRead());
             dm.setWrite(control.getMemWrite());
@@ -1319,23 +977,16 @@ public class APP extends javax.swing.JFrame {
             mux5.setControl(control.getMemToReg());
             mux5.setInput1(alu.getOutput());
             mux5.setInput2(dm.load());
-            alu_mem_mux_l.setText(parseBtoD(mux5.getOutput().getBits())+"");
-
-            //rf.setReg(mux5.getOutput().getBits());
 
             adder1.setInput1(pc.getPC());
             adder1.setInput2(d);
             adder1.add();
-            pc_adder_output_l.setText(parseBtoD(adder1.getOutput().getBits())+"");
             DataPath w=new DataPath(32);
-            //  w.setBits(parseDtoB((Parse.parseBtoD_unsigned(se.getOutput().getBits())-1),32));//2l -1 34an 2l 16 bit bytb3to fl branch zyada wa7ed
+            
             adder2.setInput1(adder1.getOutput());
             sl2.setInput(se.getOutput());
             adder2.setInput2(sl2.getOutput());
             adder2.add();
-            branch_adder_input1_l.setText(parseBtoD(adder1.getOutput().getBits())+"");
-            branch_adder_input2_l.setText(parseBtoD(sl2.getOutput().getBits())+"");
-            branch_adder_output_l.setText(parseBtoD(adder2.getOutput().getBits())+"");
 
             //ALU.ZeroFlag();
             String s;
@@ -1343,11 +994,10 @@ public class APP extends javax.swing.JFrame {
             s="1";
             else
             s="0";
-            and_gate_l.setText(s);
+
             mux1.setControl(s);
             mux1.setInput1(adder1.getOutput());
             mux1.setInput2(adder2.getOutput());
-            branch_mux_l.setText(parseBtoD(mux1.getOutput().getBits())+"");
 
             for(int i=4;i<30;i++)
             d2.setbyte(i, im.getThe26bit_address().getbyte(i-4));
@@ -1360,31 +1010,19 @@ public class APP extends javax.swing.JFrame {
             mux2.setInput1(mux1.getOutput());
             mux2.setInput2(d2);
 
-            //pc.setPC(mux2.getOutput().getBits());
-            //mux6.setControl(control.getJumpReg());//wronge control signal
-
             //sl3.setInput(rf.getReg(31));
             mux6.setControl(control.getPCSrc());//true control signal
             mux6.setInput1(mux2.getOutput());
             //mux6.setInput2(rf.getReg(31));
             mux6.setInput2(rf.getReg(31));//34an 2l shift left bta3t 2l $ra fl jr
-            jr_mux_l.setText(parseBtoD(mux6.getOutput().getBits())+"");
+
 
             //mux7.setControl(control.getPCSrc());//wronge control signal
 
             mux7.setControl(control.getJumpReg());//true control signal
             mux7.setInput1(mux5.getOutput());
             mux7.setInput2(adder1.getOutput());
-            jal_mux_l.setText(parseBtoD(mux7.getOutput().getBits())+"");
-            write_data_rf_l.setText(parseBtoD(mux7.getOutput().getBits())+"");
 
-            //for lui instruction
-            //lesa 3yzen n3mel instruction lui fl instructions wl instruction memory ,2na 3mltha fl control unit
-            //mux9.setInput1(mux7.getOutput());
-            //mux9.setInput2(se.getOutput());
-            //mux9.setControl(control.getLui());
-            //rf.setReg(mux9.getOutput().getBits());
-            signextend_output_l.setText(parseBtoD(se.getOutput().getBits())+"");
             rf.setReg(mux7.getOutput().getBits());
             pc.setPC(mux6.getOutput().getBits());
             dm.setSP(Parse.parseBtoD(rf.getReg(29).getBits()));
@@ -1396,7 +1034,7 @@ public class APP extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_runrActionPerformed
 
-    private void nextrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextrActionPerformed
+    private void nextrActionPerformed(java.awt.event.ActionEvent evt) {                                      
         if((k<im.getI())&&k>=0){
             counter++;
             im.CreateMachineString(im.getInstructionLine(PC.getCurrent()));
@@ -1411,41 +1049,21 @@ public class APP extends javax.swing.JFrame {
             rt_l.setText(parseBtoD(im.getRt().getBits())+"");
             rd_l.setText(parseBtoD(im.getRd().getBits())+"");
             funct_l.setText(parseBtoD(im.getFunc().getBits())+"");
-            shamt_l.setText(parseBtoD(im.getShamt().getBits())+"");
-            ctr_aluOp_l.setText(control.getALUop());
-            ctr_aluSrc_l.setText(control.getALUSrc());
-            ctr_branch_l.setText(control.getBranch());
-            ctr_jal_l.setText(control.getJumpReg());
-            ctr_jr_l.setText(control.getPCSrc());
-            ctr_jump_l.setText(control.getJump());
-            ctr_memRead_l.setText(control.getMemRead());
-            ctr_memToReg_l.setText(control.getMemToReg());
-            ctr_memWrite_l.setText(control.getMemWrite());
-            ctr_regDest_l.setText(control.getRegDst());
-            ctr_regWrite_l.setText(control.getRegWrite());
-            ctr_shiftLogic_l.setText(control.getShift());
-
             mux3.setControl(control.getRegDst());
             mux3.setInput1(im.getRt());
             mux3.setInput2(im.getRd());
-            rd_mux_l.setText(parseBtoD(mux3.getOutput().getBits())+"");
 
             rf.setControl(control.getRegWrite());
             rf.SetRegisterFile(im.getRs(), im.getRt(), mux3.getOutput());
             se.setInput(im.getThe16bit_address());
-            signextend_input_l.setText(parseBtoD(im.getThe16bit_address().getBits())+"");
 
             mux8.setControl(control.getShift());
             mux8.setInput2(im.getShamt());
             mux8.setInput1(rf.getRead2());
-            shamt_mux_l.setText(parseBtoD(mux8.getOutput().getBits())+"");
-            read_data1_l.setText(parseBtoD(rf.getRead1().getBits())+"");
-            read_data2_l.setText(parseBtoD(rf.getRead2().getBits())+"");
 
             mux4.setControl(control.getALUSrc());
             mux4.setInput1(mux8.getOutput());
             mux4.setInput2(se.getOutput());
-            alu_src_mux_l.setText(parseBtoD(mux4.getOutput().getBits())+"");
 
             //alucont.Do(control.getALUop(),BtoS(im.getFunc().getBits()));
             alucont.AluControl_ctrl(im.getFunc(), control.getALUop());
@@ -1453,16 +1071,9 @@ public class APP extends javax.swing.JFrame {
             alu.setInp1(rf.getRead1());
             alu.setInp2(mux4.getOutput());
             alu.setSig(alucont.getSignal(),Parse.BtoS(im.getOpcode().getBits()));
-            alu_input1_l.setText(parseBtoD(rf.getRead1().getBits())+"");
-            alu_input2_l.setText(parseBtoD(mux4.getOutput().getBits())+"");
-            alu_control_l.setText(alucont.getSignal());
 
             dm.setSP(Parse.parseBtoD((rf.getReg(28).getBits())));
             int x=Parse.parseBtoD(alu.getOutput().getBits());
-            alu_output_l.setText(parseBtoD(alu.getOutput().getBits())+"");
-            mem_address_l.setText(parseBtoD(alu.getOutput().getBits())+"");
-            mem_write_data_l.setText(parseBtoD(rf.getRead2().getBits())+"");
-            zero_flag_l.setText(alu.getZeroFlag()+"");
             dm.setAddress(x);
             dm.setRead(control.getMemRead());
             dm.setWrite(control.getMemWrite());
@@ -1474,23 +1085,15 @@ public class APP extends javax.swing.JFrame {
             mux5.setControl(control.getMemToReg());
             mux5.setInput1(alu.getOutput());
             mux5.setInput2(dm.load());
-            alu_mem_mux_l.setText(parseBtoD(mux5.getOutput().getBits())+"");
-
-            //rf.setReg(mux5.getOutput().getBits());
 
             adder1.setInput1(pc.getPC());
             adder1.setInput2(d);
             adder1.add();
-            pc_adder_output_l.setText(parseBtoD(adder1.getOutput().getBits())+"");
             DataPath w=new DataPath(32);
-            //  w.setBits(parseDtoB((Parse.parseBtoD_unsigned(se.getOutput().getBits())-1),32));//2l -1 34an 2l 16 bit bytb3to fl branch zyada wa7ed
             adder2.setInput1(adder1.getOutput());
             sl2.setInput(se.getOutput());
             adder2.setInput2(sl2.getOutput());
             adder2.add();
-            branch_adder_input1_l.setText(parseBtoD(adder1.getOutput().getBits())+"");
-            branch_adder_input2_l.setText(parseBtoD(sl2.getOutput().getBits())+"");
-            branch_adder_output_l.setText(parseBtoD(adder2.getOutput().getBits())+"");
 
             //ALU.ZeroFlag();
             String s;
@@ -1498,11 +1101,9 @@ public class APP extends javax.swing.JFrame {
             s="1";
             else
             s="0";
-            and_gate_l.setText(s);
             mux1.setControl(s);
             mux1.setInput1(adder1.getOutput());
             mux1.setInput2(adder2.getOutput());
-            branch_mux_l.setText(parseBtoD(mux1.getOutput().getBits())+"");
 
             for(int i=4;i<30;i++)
             d2.setbyte(i, im.getThe26bit_address().getbyte(i-4));
@@ -1515,31 +1116,13 @@ public class APP extends javax.swing.JFrame {
             mux2.setInput1(mux1.getOutput());
             mux2.setInput2(d2);
 
-            //pc.setPC(mux2.getOutput().getBits());
-            //mux6.setControl(control.getJumpReg());//wronge control signal
-
-            //sl3.setInput(rf.getReg(31));
             mux6.setControl(control.getPCSrc());//true control signal
             mux6.setInput1(mux2.getOutput());
-            //mux6.setInput2(rf.getReg(31));
             mux6.setInput2(rf.getReg(31));//34an 2l shift left bta3t 2l $ra fl jr
-            jr_mux_l.setText(parseBtoD(mux6.getOutput().getBits())+"");
-
-            //mux7.setControl(control.getPCSrc());//wronge control signal
 
             mux7.setControl(control.getJumpReg());//true control signal
             mux7.setInput1(mux5.getOutput());
             mux7.setInput2(adder1.getOutput());
-            jal_mux_l.setText(parseBtoD(mux7.getOutput().getBits())+"");
-            write_data_rf_l.setText(parseBtoD(mux7.getOutput().getBits())+"");
-
-            //for lui instruction
-            //lesa 3yzen n3mel instruction lui fl instructions wl instruction memory ,2na 3mltha fl control unit
-            //mux9.setInput1(mux7.getOutput());
-            //mux9.setInput2(se.getOutput());
-            //mux9.setControl(control.getLui());
-            //rf.setReg(mux9.getOutput().getBits());
-            signextend_output_l.setText(parseBtoD(se.getOutput().getBits())+"");
             rf.setReg(mux7.getOutput().getBits());
             pc.setPC(mux6.getOutput().getBits());
             dm.setSP(Parse.parseBtoD(rf.getReg(29).getBits()));
@@ -1549,7 +1132,7 @@ public class APP extends javax.swing.JFrame {
             k=(Parse.parseBtoD(pc.getPC().getBits())-nomono)/4;//for testing the pc
             System.out.println(k);//for testing the pc
         }
-    }//GEN-LAST:event_nextrActionPerformed
+    }
 
     private void compilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compilerActionPerformed
         Scanner sc=new Scanner(System.in);
@@ -1609,6 +1192,50 @@ public class APP extends javax.swing.JFrame {
     private void compilerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_compilerMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_compilerMouseClicked
+
+    private void jTextArea1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextArea1MouseExited
+
+    private void jTextArea1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextArea1MouseClicked
+        this.jTextArea1.setEnabled(true);
+    }//GEN-LAST:event_jTextArea1MouseClicked
+
+    private void jTextArea1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextArea1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextArea1FocusLost
+
+    private void datapath_scrlMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_datapath_scrlMouseClicked
+        this.jTextArea1.setEnabled(false);
+    }//GEN-LAST:event_datapath_scrlMouseClicked
+
+    private void mempanalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mempanalMouseClicked
+        this.jTextArea1.setEnabled(false);
+    }//GEN-LAST:event_mempanalMouseClicked
+
+    private void ADD_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ADD_btnActionPerformed
+        // TODO add your handling code here:
+        //dm.setSP(parseBtoD(StoB(address_lbl.getText(),32)));
+        try{
+            dm.setWrite("10");
+            dm.setAddress(parseBtoD(StoB(address_lbl.getText())));
+            dm.store(StoB(data_lbl.getText()));
+            this.ADDMEMORYLABEL(dm.getAddress(), dm.getLocation());
+            this.repaint();
+        }
+        catch(Exception e){
+            address_lbl.setText("ERROR");
+            data_lbl.setText("NV");
+        }
+    }//GEN-LAST:event_ADD_btnActionPerformed
+
+    private void data_lblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_data_lblActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_data_lblActionPerformed
+
+    private void address_lblActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_address_lblActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_address_lblActionPerformed
 
     public  void ADDMEMORYLABEL(int address,int locations){
         boolean x=false;
@@ -1700,178 +1327,104 @@ public class APP extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private JLabel $0;
-    private JLabel $0s;
-    private JLabel $a0;
-    private JLabel $a0s;
-    private JLabel $a1;
-    private JLabel $a1s;
-    private JLabel $a2;
-    private JLabel $a2s;
-    private JLabel $a3;
-    private JLabel $a3s;
-    private JLabel $at;
-    private JLabel $ats;
-    private JLabel $fp;
-    private JLabel $fps;
-    private JLabel $gp;
-    private JLabel $gps;
-    private JLabel $k0;
-    private JLabel $k0s;
-    private JLabel $k1;
-    private JLabel $k1s;
-    private JLabel $ra;
-    private JLabel $ras;
-    private JLabel $s0;
-    private JLabel $s0s;
-    private JLabel $s1;
-    private JLabel $s1s;
-    private JLabel $s2;
-    private JLabel $s2s;
-    private JLabel $s3;
-    private JLabel $s3s;
-    private JLabel $s4;
-    private JLabel $s4s;
-    private JLabel $s5;
-    private JLabel $s5s;
-    private JLabel $s6;
-    private JLabel $s6s;
-    private JLabel $s7;
-    private JLabel $s7s;
-    private JLabel $sp;
-    private JLabel $sps;
-    private JLabel $t0;
-    private JLabel $t0s;
-    private JLabel $t1;
-    private JLabel $t1s;
-    private JLabel $t2;
-    private JLabel $t2s;
-    private JLabel $t3;
-    private JLabel $t3s;
-    private JLabel $t4;
-    private JLabel $t4s;
-    private JLabel $t5;
-    private JLabel $t5s;
-    private JLabel $t6;
-    private JLabel $t6s;
-    private JLabel $t7;
-    private JLabel $t7s;
-    private JLabel $t8;
-    private JLabel $t8s;
-    private JLabel $t9;
-    private JLabel $t9s;
-    private JLabel $v0;
-    private JLabel $v0s;
-    private JLabel $v1;
-    private JLabel $v1s;
+    private javax.swing.JLabel $0;
+    private javax.swing.JLabel $0s;
+    private javax.swing.JLabel $a0;
+    private javax.swing.JLabel $a0s;
+    private javax.swing.JLabel $a1;
+    private javax.swing.JLabel $a1s;
+    private javax.swing.JLabel $a2;
+    private javax.swing.JLabel $a2s;
+    private javax.swing.JLabel $a3;
+    private javax.swing.JLabel $a3s;
+    private javax.swing.JLabel $at;
+    private javax.swing.JLabel $ats;
+    private javax.swing.JLabel $fp;
+    private javax.swing.JLabel $fps;
+    private javax.swing.JLabel $gp;
+    private javax.swing.JLabel $gps;
+    private javax.swing.JLabel $k0;
+    private javax.swing.JLabel $k0s;
+    private javax.swing.JLabel $k1;
+    private javax.swing.JLabel $k1s;
+    private javax.swing.JLabel $ra;
+    private javax.swing.JLabel $ras;
+    private javax.swing.JLabel $s0;
+    private javax.swing.JLabel $s0s;
+    private javax.swing.JLabel $s1;
+    private javax.swing.JLabel $s1s;
+    private javax.swing.JLabel $s2;
+    private javax.swing.JLabel $s2s;
+    private javax.swing.JLabel $s3;
+    private javax.swing.JLabel $s3s;
+    private javax.swing.JLabel $s4;
+    private javax.swing.JLabel $s4s;
+    private javax.swing.JLabel $s5;
+    private javax.swing.JLabel $s5s;
+    private javax.swing.JLabel $s6;
+    private javax.swing.JLabel $s6s;
+    private javax.swing.JLabel $s7;
+    private javax.swing.JLabel $s7s;
+    private javax.swing.JLabel $sp;
+    private javax.swing.JLabel $sps;
+    private javax.swing.JLabel $t0;
+    private javax.swing.JLabel $t0s;
+    private javax.swing.JLabel $t1;
+    private javax.swing.JLabel $t1s;
+    private javax.swing.JLabel $t2;
+    private javax.swing.JLabel $t2s;
+    private javax.swing.JLabel $t3;
+    private javax.swing.JLabel $t3s;
+    private javax.swing.JLabel $t4;
+    private javax.swing.JLabel $t4s;
+    private javax.swing.JLabel $t5;
+    private javax.swing.JLabel $t5s;
+    private javax.swing.JLabel $t6;
+    private javax.swing.JLabel $t6s;
+    private javax.swing.JLabel $t7;
+    private javax.swing.JLabel $t7s;
+    private javax.swing.JLabel $t8;
+    private javax.swing.JLabel $t8s;
+    private javax.swing.JLabel $t9;
+    private javax.swing.JLabel $t9s;
+    private javax.swing.JLabel $v0;
+    private javax.swing.JLabel $v0s;
+    private javax.swing.JLabel $v1;
+    private javax.swing.JLabel $v1s;
     private javax.swing.JButton ADD_btn;
     private javax.swing.JTextField address_lbl;
-    private JLabel alu_control_l;
-    private JLabel alu_input1_l;
-    private JLabel alu_input2_l;
-    private JLabel alu_mem_mux;
-    private JLabel alu_mem_mux_l;
-    private JLabel alu_output_l;
-    private JLabel alu_src_mux_l;
-    private JLabel aluout1;
-    private JLabel and_gate_l;
-    private JLabel andgate1;
-    private JLabel bit16;
-    private JLabel bit32_rd2shamt_mux;
-    private JLabel bit32_sl2;
-    private JLabel bit33;
-    private JLabel branch_adder1;
-    private JLabel branch_adder_input1_l;
-    private JLabel branch_adder_input2_l;
-    private JLabel branch_adder_output_l;
-    private JLabel branch_mux;
-    private JLabel branch_mux_l;
+    private javax.swing.JLabel bit16;
+    private javax.swing.JLabel bit32_rd2shamt_mux;
     private javax.swing.JMenuItem compiler;
-    private JLabel counter_l;
-    private JLabel ctr_aluOp_l;
-    private JLabel ctr_aluSrc_l;
-    private JLabel ctr_aluop;
-    private JLabel ctr_alusrc;
-    private JLabel ctr_branch1;
-    private JLabel ctr_branch_l;
-    private JLabel ctr_jal_l;
-    private JLabel ctr_jr_l;
-    private JLabel ctr_jreg;
-    private JLabel ctr_jump;
-    private JLabel ctr_jump_l;
-    private JLabel ctr_memRead_l;
-    private JLabel ctr_memToReg_l;
-    private JLabel ctr_memWrite_l;
-    private JLabel ctr_memread;
-    private JLabel ctr_memreg1;
-    private JLabel ctr_memwrite1;
-    private JLabel ctr_pcsrc;
-    private JLabel ctr_regDest_l;
-    private JLabel ctr_regWrite_l;
-    private JLabel ctr_regdst1;
-    private JLabel ctr_regwrite1;
-    private JLabel ctr_shiftLogic_l;
-    private JLabel ctr_shiftlogic1;
+    private javax.swing.JLabel counter_l;
     private javax.swing.JTextField data_lbl;
-    private javax.swing.JPanel datapath;
     private javax.swing.JScrollPane datapath_scrl;
     private javax.swing.JPanel datapath_values;
-    private JLabel func;
-    private JLabel funct_l;
-    private JLabel jLabel1;
-    private JLabel jLabel3;
-    private JLabel jLabel5;
-    private JLabel jLabel6;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JLabel func;
+    private javax.swing.JLabel funct_l;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private JLabel jal_mux1;
-    private JLabel jal_mux_l;
-    private JLabel jr_mux;
-    private JLabel jr_mux_l;
-    private JLabel jumb_add;
-    private JLabel jumb_mux1;
-    private JLabel mem_address_l;
-    private JLabel mem_write_data_l;
     private javax.swing.JPanel memory;
     private javax.swing.JScrollPane memoryscrl;
-    private JLabel memoutput1;
     private javax.swing.JPanel mempanal;
     private javax.swing.JMenuItem nextr;
-    private JLabel op_code_l;
-    private JLabel opcode1;
-    private JLabel pc_adder_output_l;
-    private JLabel pc_output_l;
-    private JLabel pcoutput;
-    private JLabel pcp5;
-    private JLabel rd2_shamt_mux1;
-    private JLabel rd_l;
-    private JLabel rd_mux_l;
-    private JLabel read_data1;
-    private JLabel read_data1_l;
-    private JLabel read_data2_l;
-    private JLabel read_data4;
-    private JLabel regdstmux1;
+    private javax.swing.JLabel op_code_l;
+    private javax.swing.JLabel pc_output_l;
+    private javax.swing.JLabel rd_l;
     private javax.swing.JPanel registers;
-    private JLabel rf_rf;
-    private JLabel rs;
-    private JLabel rs_l;
-    private JLabel rt1;
-    private JLabel rt_l;
+    private javax.swing.JLabel rf_rf;
+    private javax.swing.JLabel rs;
+    private javax.swing.JLabel rs_l;
+    private javax.swing.JLabel rt_l;
     private javax.swing.JMenuItem runr;
-    private JLabel shamt;
-    private JLabel shamt_l;
-    private JLabel shamt_mux_l;
-    private JLabel signextend_input_l;
-    private JLabel signextend_output_l;
+    private javax.swing.JLabel shamt;
     private javax.swing.JPanel south;
     private javax.swing.JPanel text_area;
-    private JLabel write_data_rf_l;
-    private JLabel zero_flag_l;
-    private JLabel zerofalg;
     // End of variables declaration//GEN-END:variables
 }
