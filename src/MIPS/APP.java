@@ -11,11 +11,9 @@ import Unidades.MUX;
 import Unidades.PC;
 import Unidades.Parse;
 import static Unidades.Parse.*;
-//import static Units.Parse.parseDtoB;
 import Unidades.RegisterFile;
 import Unidades.SL2;
 import Unidades.SignExtend;
-
 import java.awt.Color;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -701,7 +699,7 @@ public class APP extends javax.swing.JFrame {
         text_area.setLayout(new java.awt.BorderLayout());
 
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -988,7 +986,7 @@ public class APP extends javax.swing.JFrame {
 
             control.setInput(im.getOpcode(), im.getFunc());
 
-            counter_l.setText("Instructions done:"+counter+"");
+            counter_l.setText("Passo: "+counter+"");
             pc_output_l.setText(parseBtoD(pc.getPC().getBits())+"");
             op_code_l.setText(parseBtoD(im.getOpcode().getBits())+"");
             rs_l.setText(parseBtoD(im.getRs().getBits())+"");
@@ -1043,7 +1041,6 @@ public class APP extends javax.swing.JFrame {
             adder2.setInput2(sl2.getOutput());
             adder2.add();
 
-            //ALU.ZeroFlag();
             String s;
             if(("1".equals(control.getBranch()))&&("1".equals(alu.getZeroFlag()+"")))
             s="1";
@@ -1067,7 +1064,6 @@ public class APP extends javax.swing.JFrame {
 
             mux6.setControl(control.getPCSrc());
             mux6.setInput1(mux2.getOutput());
-            //mux6.setInput2(rf.getReg(31));
             mux6.setInput2(rf.getReg(31));
 
             mux7.setControl(control.getJumpReg());
@@ -1093,7 +1089,7 @@ public class APP extends javax.swing.JFrame {
 
             control.setInput(im.getOpcode(), im.getFunc());
 
-            counter_l.setText("Instructions done:"+counter+"");
+            counter_l.setText("Passos: "+counter+"");
             pc_output_l.setText(parseBtoD(pc.getPC().getBits())+"");
             op_code_l.setText(parseBtoD(im.getOpcode().getBits())+"");
             rs_l.setText(parseBtoD(im.getRs().getBits())+"");
@@ -1116,7 +1112,6 @@ public class APP extends javax.swing.JFrame {
             mux4.setInput1(mux8.getOutput());
             mux4.setInput2(se.getOutput());
 
-            //alucont.Do(control.getALUop(),BtoS(im.getFunc().getBits()));
             alucont.AluControl_ctrl(im.getFunc(), control.getALUop());
 
             alu.setInp1(rf.getRead1());
@@ -1146,7 +1141,6 @@ public class APP extends javax.swing.JFrame {
             adder2.setInput2(sl2.getOutput());
             adder2.add();
 
-            //ALU.ZeroFlag();
             String s;
             if(("1".equals(control.getBranch()))&&("1".equals(alu.getZeroFlag()+"")))
             s="1";
@@ -1167,11 +1161,11 @@ public class APP extends javax.swing.JFrame {
             mux2.setInput1(mux1.getOutput());
             mux2.setInput2(d2);
 
-            mux6.setControl(control.getPCSrc());//true control signal
+            mux6.setControl(control.getPCSrc());
             mux6.setInput1(mux2.getOutput());
-            mux6.setInput2(rf.getReg(31));//34an 2l shift left bta3t 2l $ra fl jr
+            mux6.setInput2(rf.getReg(31));
 
-            mux7.setControl(control.getJumpReg());//true control signal
+            mux7.setControl(control.getJumpReg());
             mux7.setInput1(mux5.getOutput());
             mux7.setInput2(adder1.getOutput());
             rf.setReg(mux7.getOutput().getBits());
@@ -1180,8 +1174,8 @@ public class APP extends javax.swing.JFrame {
             rf.resetzero();
             this.GET_REGISTERVALUE();
 
-            k=(Parse.parseBtoD(pc.getPC().getBits())-nomono)/4;//for testing the pc
-            System.out.println(k);//for testing the pc
+            k=(Parse.parseBtoD(pc.getPC().getBits())-nomono)/4;
+            System.out.println(k);
         }
     }
 
@@ -1212,7 +1206,7 @@ public class APP extends javax.swing.JFrame {
         mux9=new MUX(32);
         alucont=new AluControl();
         im=new InstructionMemory();
-        //dm=new DataMemory();/////////////////////////////
+        dm=new DataMemory();
         rf=new RegisterFile();
         counter=0;
 
@@ -1221,20 +1215,15 @@ public class APP extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(APP.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //the datapath
-        //File file =new File("input.txt");
+
         n=Parse.parseBtoD(pc.getPC().getBits());
         im.setinstruction("Modelo.txt",n  );
         d2=new DataPath(32);
         d=new DataPath(32);
         d.setBits(parseDtoB(4,32));
 
-        //load 2l data memory
-        //System.out.println("load the Data Memory");
-        //dm.loadData();
-
         k=(Parse.parseBtoD(pc.getPC().getBits())-nomono)/4;//for testing
-        System.out.println(k);//for testing
+        System.out.println(k);
     }//GEN-LAST:event_compilerActionPerformed
 
     private void compilerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_compilerMouseClicked
@@ -1289,7 +1278,7 @@ public class APP extends javax.swing.JFrame {
         boolean x=false;
         for(int i=0;i<Labels.size();i++){
             if(Labels.get(i).address==address){
-                Labels.get(i).j.setText("memory:"+address+"="+locations);
+                Labels.get(i).j.setText("Memoria: "+address+"="+locations);
                 //Labels.get(i).j.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEtchedBorder(), BorderFactory.createLineBorder(Color.BLACK)));
                 x=true;
             }
@@ -1304,7 +1293,7 @@ public class APP extends javax.swing.JFrame {
     }
     
     private void GET_REGISTERVALUE(){
-      //  $0s.setText((Parse.parseBtoD((rf.getReg(0)).getBits()))+"");
+      // $0s.setText((Parse.parseBtoD((rf.getReg(0)).getBits()))+"");
          $ats.setText((Parse.parseBtoD((rf.getReg(1)).getBits()))+"");
           $v0s.setText((Parse.parseBtoD((rf.getReg(2)).getBits()))+"");
            $v1s.setText((Parse.parseBtoD((rf.getReg(3)).getBits()))+"");
