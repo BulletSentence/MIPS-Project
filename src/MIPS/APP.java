@@ -32,7 +32,7 @@ public class APP extends javax.swing.JFrame {
     private int[] parseInt(String text) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
     class mem{
         JLabel j;
         int address;
@@ -106,10 +106,10 @@ public class APP extends javax.swing.JFrame {
 
         south = new javax.swing.JPanel();
         memory = new javax.swing.JPanel();
-        counter_l = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         memoryscrl = new javax.swing.JScrollPane();
         mempanal = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
         registers = new javax.swing.JPanel();
         $0 = new javax.swing.JLabel();
         $0s = new javax.swing.JLabel();
@@ -179,6 +179,7 @@ public class APP extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         datapath_scrl = new javax.swing.JScrollPane();
         datapath_values = new javax.swing.JPanel();
@@ -194,10 +195,16 @@ public class APP extends javax.swing.JFrame {
         funct_l = new javax.swing.JLabel();
         bit32_rd2shamt_mux = new javax.swing.JLabel();
         pc_output_l = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         address_lbl = new javax.swing.JTextField();
         data_lbl = new javax.swing.JTextField();
         ADD_btn = new javax.swing.JButton();
+        counter_l = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        save_btn = new javax.swing.JButton();
+        next_btn = new javax.swing.JButton();
+        run_brn = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         compiler = new javax.swing.JMenuItem();
@@ -205,27 +212,15 @@ public class APP extends javax.swing.JFrame {
         runr = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("SIMULADOR DE MIPS");
-        setMinimumSize(new java.awt.Dimension(1270, 720));
-        setName("application");
+        setTitle("SIMULADOR MIPS");
+        setMinimumSize(new java.awt.Dimension(1270, 700));
+        setName("application"); // NOI18N
         setResizable(false);
 
         south.setPreferredSize(new java.awt.Dimension(500, 100));
         south.setLayout(new java.awt.GridLayout(1, 0));
 
         memory.setLayout(new java.awt.BorderLayout());
-
-        counter_l.setBackground(new java.awt.Color(255, 255, 255));
-        counter_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        counter_l.setText("Passos: 0");
-        counter_l.setToolTipText("");
-        counter_l.setAlignmentY(0.0F);
-        counter_l.setFocusable(false);
-        counter_l.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        counter_l.setIconTextGap(10);
-        counter_l.setInheritsPopupMenu(false);
-        counter_l.setOpaque(true);
-        memory.add(counter_l, java.awt.BorderLayout.PAGE_END);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         memory.add(jPanel2, java.awt.BorderLayout.LINE_END);
@@ -234,6 +229,8 @@ public class APP extends javax.swing.JFrame {
 
         mempanal.setBackground(new java.awt.Color(255, 255, 255));
         mempanal.setToolTipText("");
+        mempanal.setMinimumSize(new java.awt.Dimension(20, 20));
+        mempanal.setPreferredSize(new java.awt.Dimension(20, 20));
         mempanal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 mempanalMouseClicked(evt);
@@ -244,6 +241,9 @@ public class APP extends javax.swing.JFrame {
 
         memory.add(memoryscrl, java.awt.BorderLayout.CENTER);
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        memory.add(jPanel5, java.awt.BorderLayout.LINE_START);
+
         south.add(memory);
 
         getContentPane().add(south, java.awt.BorderLayout.SOUTH);
@@ -252,7 +252,7 @@ public class APP extends javax.swing.JFrame {
         registers.setBorder(javax.swing.BorderFactory.createTitledBorder("Registradores"));
         registers.setAlignmentX(10.0F);
         registers.setFocusable(false);
-        registers.setPreferredSize(new java.awt.Dimension(200, 900));
+        registers.setPreferredSize(new java.awt.Dimension(200, 700));
         registers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 registersMousePressed(evt);
@@ -725,6 +725,12 @@ public class APP extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         text_area.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setText("DADOS DA MEMORIA");
+        jPanel3.add(jLabel2);
+
         text_area.add(jPanel3, java.awt.BorderLayout.PAGE_END);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -749,90 +755,93 @@ public class APP extends javax.swing.JFrame {
         rf_rf.setBackground(new java.awt.Color(255, 255, 255));
         rf_rf.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rf_rf.setText("OP code");
-        rf_rf.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rf_rf.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         rf_rf.setOpaque(true);
         datapath_values.add(rf_rf);
 
         op_code_l.setBackground(java.awt.Color.white);
         op_code_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        op_code_l.setText("opcode");
-        op_code_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        op_code_l.setText("0");
+        op_code_l.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         op_code_l.setOpaque(true);
         datapath_values.add(op_code_l);
 
         rs.setBackground(java.awt.Color.white);
         rs.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         rs.setText("Rs");
-        rs.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rs.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         rs.setOpaque(true);
         datapath_values.add(rs);
 
         rs_l.setBackground(java.awt.Color.white);
         rs_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rs_l.setText("jLabel65");
-        rs_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rs_l.setText("0");
+        rs_l.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         rs_l.setOpaque(true);
         datapath_values.add(rs_l);
 
         bit16.setBackground(java.awt.Color.white);
         bit16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bit16.setText("Rt");
-        bit16.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        bit16.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bit16.setOpaque(true);
         datapath_values.add(bit16);
 
         rt_l.setBackground(java.awt.Color.white);
         rt_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rt_l.setText("jLabel65");
-        rt_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rt_l.setText("0");
+        rt_l.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         rt_l.setOpaque(true);
         datapath_values.add(rt_l);
 
         func.setBackground(java.awt.Color.white);
         func.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         func.setText("Rd");
-        func.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        func.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         func.setOpaque(true);
         datapath_values.add(func);
 
         rd_l.setBackground(java.awt.Color.white);
         rd_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        rd_l.setText("jLabel65");
-        rd_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        rd_l.setText("0");
+        rd_l.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         rd_l.setOpaque(true);
         datapath_values.add(rd_l);
 
         shamt.setBackground(java.awt.Color.white);
         shamt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shamt.setText("Funct");
-        shamt.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        shamt.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         shamt.setOpaque(true);
         datapath_values.add(shamt);
 
         funct_l.setBackground(java.awt.Color.white);
         funct_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        funct_l.setText("jLabel65");
-        funct_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        funct_l.setText("0");
+        funct_l.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         funct_l.setOpaque(true);
         datapath_values.add(funct_l);
 
         bit32_rd2shamt_mux.setBackground(java.awt.Color.white);
         bit32_rd2shamt_mux.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bit32_rd2shamt_mux.setText("PC");
-        bit32_rd2shamt_mux.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        bit32_rd2shamt_mux.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bit32_rd2shamt_mux.setOpaque(true);
         datapath_values.add(bit32_rd2shamt_mux);
 
         pc_output_l.setBackground(java.awt.Color.white);
         pc_output_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pc_output_l.setText("jLabel65");
-        pc_output_l.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED)));
+        pc_output_l.setText("0");
+        pc_output_l.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pc_output_l.setOpaque(true);
         datapath_values.add(pc_output_l);
 
         datapath_scrl.setViewportView(datapath_values);
 
         jPanel4.add(datapath_scrl);
+
+        jLabel1.setText("Adicionar dados na Memória");
+        jPanel4.add(jLabel1);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(20, 20));
@@ -867,6 +876,59 @@ public class APP extends javax.swing.JFrame {
         jPanel1.add(ADD_btn);
 
         jPanel4.add(jPanel1);
+
+        counter_l.setBackground(new java.awt.Color(255, 255, 255));
+        counter_l.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        counter_l.setText("Passos: 0");
+        counter_l.setToolTipText("");
+        counter_l.setAlignmentY(0.0F);
+        counter_l.setFocusable(false);
+        counter_l.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        counter_l.setIconTextGap(10);
+        counter_l.setInheritsPopupMenu(false);
+        counter_l.setOpaque(true);
+        jPanel4.add(counter_l);
+
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setAlignmentX(0.0F);
+        jPanel6.setPreferredSize(new java.awt.Dimension(200, 90));
+
+        save_btn.setText("SALVAR");
+        save_btn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        save_btn.setPreferredSize(new java.awt.Dimension(180, 23));
+        save_btn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                compilerMouseClicked(evt);
+            }
+        });
+        save_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                compilerActionPerformed(evt);
+            }
+        });
+        jPanel6.add(save_btn);
+
+        next_btn.setText("PROXIMO PASSO");
+        next_btn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        next_btn.setPreferredSize(new java.awt.Dimension(180, 23));
+        next_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextrActionPerformed(evt);
+            }
+        });
+        jPanel6.add(next_btn);
+
+        run_brn.setText("EXECUTAR TODO");
+        run_brn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        run_brn.setPreferredSize(new java.awt.Dimension(180, 23));
+        run_brn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                runrActionPerformed(evt);
+            }
+        });
+        jPanel6.add(run_brn);
+
+        jPanel4.add(jPanel6);
 
         text_area.add(jPanel4, java.awt.BorderLayout.LINE_START);
 
@@ -956,7 +1018,6 @@ public class APP extends javax.swing.JFrame {
             mux4.setInput1(mux8.getOutput());
             mux4.setInput2(se.getOutput());
 
-            //alucont.Do(control.getALUop(),BtoS(im.getFunc().getBits()));
             alucont.AluControl_ctrl(im.getFunc(), control.getALUop());
 
             alu.setInp1(rf.getRead1());
@@ -1010,16 +1071,12 @@ public class APP extends javax.swing.JFrame {
             mux2.setInput1(mux1.getOutput());
             mux2.setInput2(d2);
 
-            //sl3.setInput(rf.getReg(31));
-            mux6.setControl(control.getPCSrc());//true control signal
+            mux6.setControl(control.getPCSrc());
             mux6.setInput1(mux2.getOutput());
             //mux6.setInput2(rf.getReg(31));
-            mux6.setInput2(rf.getReg(31));//34an 2l shift left bta3t 2l $ra fl jr
+            mux6.setInput2(rf.getReg(31));
 
-
-            //mux7.setControl(control.getPCSrc());//wronge control signal
-
-            mux7.setControl(control.getJumpReg());//true control signal
+            mux7.setControl(control.getJumpReg());
             mux7.setInput1(mux5.getOutput());
             mux7.setInput2(adder1.getOutput());
 
@@ -1029,10 +1086,10 @@ public class APP extends javax.swing.JFrame {
             rf.resetzero();
             this.GET_REGISTERVALUE();
 
-            k=(parseBtoD(pc.getPC().getBits())-nomono)/4;//for testing the pc
-            System.out.println(k);//for testing the pc
+            k=(parseBtoD(pc.getPC().getBits())-nomono)/4;
+            System.out.println(k);
         }
-    }//GEN-LAST:event_runrActionPerformed
+    }
 
     private void nextrActionPerformed(java.awt.event.ActionEvent evt) {                                      
         if((k<im.getI())&&k>=0){
@@ -1134,15 +1191,12 @@ public class APP extends javax.swing.JFrame {
         }
     }
 
-    private void compilerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compilerActionPerformed
+    private void compilerActionPerformed(java.awt.event.ActionEvent evt) {
         Scanner sc=new Scanner(System.in);
 
         // nomono=sc.nextInt();
         nomono=4;
         Unidades.Instruction.setOffset(nomono);
-        //System.out.println("enter the starting address");
-        //offset=sc.nextInt();
-
         pc=new PC(nomono);
         adder1=new ADDER();
         adder2=new ADDER();
@@ -1402,17 +1456,22 @@ public class APP extends javax.swing.JFrame {
     private javax.swing.JPanel datapath_values;
     private javax.swing.JLabel func;
     private javax.swing.JLabel funct_l;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JPanel memory;
     private javax.swing.JScrollPane memoryscrl;
     private javax.swing.JPanel mempanal;
+    private javax.swing.JButton next_btn;
     private javax.swing.JMenuItem nextr;
     private javax.swing.JLabel op_code_l;
     private javax.swing.JLabel pc_output_l;
@@ -1422,7 +1481,9 @@ public class APP extends javax.swing.JFrame {
     private javax.swing.JLabel rs;
     private javax.swing.JLabel rs_l;
     private javax.swing.JLabel rt_l;
+    private javax.swing.JButton run_brn;
     private javax.swing.JMenuItem runr;
+    private javax.swing.JButton save_btn;
     private javax.swing.JLabel shamt;
     private javax.swing.JPanel south;
     private javax.swing.JPanel text_area;
