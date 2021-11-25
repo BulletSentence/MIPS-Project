@@ -20,7 +20,6 @@ public class  DataPath{
     }
     
     public void setBits(int []bits){
-      //  this.bits=new int[size];
         System.arraycopy(bits, 0, this.bits, 0, size);
     }
     

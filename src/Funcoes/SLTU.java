@@ -16,6 +16,7 @@ public class SLTU extends Instruction implements Parse{
         rs = Parse.BtoS(Parse.parseDtoB(findReg((s[2])),5));
         rt =  Parse.BtoS(Parse.parseDtoB(findReg(s[3]),5));
         rd =  Parse.BtoS(Parse.parseDtoB(findReg(s[1]),5));
+
         shamt = "00000";
         func = "101011";
         return opcode +rs+rt+rd+shamt+func;

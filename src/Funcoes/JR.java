@@ -9,6 +9,7 @@ public class JR extends Instruction implements Parse{
     public JR() {
         super("JR", 0, 9);
     }
+
     @Override
     public String SetDataPath(String[] s) {
         opcode = "000000";

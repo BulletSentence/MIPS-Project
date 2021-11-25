@@ -1,10 +1,11 @@
 package Unidades;
+
 public class labels {
     private int lineno;
     private String label;
 
     public labels(int lineno, String label) {
-        this.lineno = (lineno*4)+ Instruction.offset;
+        this.lineno = (lineno * 4) + Instruction.offset;
         this.label = label;
     }
 
@@ -21,7 +22,7 @@ public class labels {
     }
 
     public void setLineno(int lineno) {
-        this.lineno = (lineno*4)+ Instruction.offset;
+        this.lineno = (lineno * 4) + Instruction.offset;
     }
-    
+
 }

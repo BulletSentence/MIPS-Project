@@ -1,10 +1,9 @@
 package Unidades;
 
-//import static Units.Parse.parseBtoD;
 import static Unidades.Parse.*;
 
 public class SL2 {
-    private DataPath input,output;
+    private DataPath input, output;
 
     public SL2() {
         this.input = new DataPath(32);
@@ -20,11 +19,7 @@ public class SL2 {
         return output;
     }
 
-    public  void SL2(){
-        /*output.setBits(input.getBits());
-        for(int i=0;i<output.getSize()-3;i++){
-            output.setbyte(i, input.getbyte(i+2));
-        }*/
-        output.setBits(parseDtoB(4*parseBtoD(input.getBits()),32));
+    public void SL2() {
+        output.setBits(parseDtoB(4 * parseBtoD(input.getBits()), 32));
     }
 }
