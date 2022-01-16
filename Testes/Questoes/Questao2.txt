@@ -2,7 +2,6 @@ addi, $s1, $0, 1
 addi, $s2, $0, 2
 addi, $s3, $0, 3
 addi, $s4, $0, 4
-
 add, $t0, $s1, $s2
 add, $t1, $s3, $s4
 sub, $s0, $t0, $t1

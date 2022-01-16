@@ -237,14 +237,14 @@ public class APP extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MIPS_SIM");
-        setMinimumSize(new java.awt.Dimension(1270, 720));
-        setName("application"); // NOI18N
+        setTitle("SIMULADOR 2.0");
+        setMinimumSize(new java.awt.Dimension(1270, 700));
+        setName("application");
         setResizable(false);
 
         registers.setFocusable(false);
-        registers.setName(""); // NOI18N
-        registers.setPreferredSize(new java.awt.Dimension(200, 822));
+        registers.setName("");
+        registers.setPreferredSize(new java.awt.Dimension(200, 800));
         registers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 registersMousePressed(evt);
@@ -252,442 +252,452 @@ public class APP extends javax.swing.JFrame {
         });
         registers.setLayout(new java.awt.GridLayout(32, 2));
 
-        $0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $0.setText("$0");
         $0.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $0.setIconTextGap(2);
+        $0.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($0);
 
-        $0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $0s.setText("0");
         $0s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $0s.setIconTextGap(2);
+        $0s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($0s);
 
-        $at.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $at.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $at.setText("$at");
         $at.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $at.setIconTextGap(2);
+        $at.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($at);
 
-        $ats.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $ats.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $ats.setText("0");
         $ats.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $ats.setIconTextGap(2);
+        $ats.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($ats);
 
-        $v0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $v0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v0.setText("$v0");
         $v0.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $v0.setIconTextGap(2);
+        $v0.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($v0);
 
-        $v0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $v0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v0s.setText("0");
         $v0s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $v0s.setIconTextGap(2);
+        $v0s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($v0s);
 
-        $v1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $v1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v1.setText("$v1");
         $v1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $v1.setIconTextGap(2);
+        $v1.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($v1);
 
-        $v1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $v1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $v1s.setText("0");
         $v1s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $v1s.setIconTextGap(2);
+        $v1s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($v1s);
 
-        $a0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a0.setText("$a0");
         $a0.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $a0.setIconTextGap(2);
+        $a0.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a0);
 
-        $a0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a0s.setText("0");
         $a0s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        $a0s.setIconTextGap(2);
+        $a0s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a0s);
 
-        $a1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a1.setText("$a1");
         $a1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $a1.setPreferredSize(new java.awt.Dimension(0, 30));
+        $a1.setIconTextGap(2);
+        $a1.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a1);
 
-        $a1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a1s.setText("0");
         $a1s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $a1s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $a1s.setIconTextGap(2);
+        $a1s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a1s);
 
-        $a2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a2.setText("$a2");
         $a2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $a2.setPreferredSize(new java.awt.Dimension(0, 30));
+        $a2.setIconTextGap(2);
+        $a2.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a2);
 
-        $a2s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a2s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a2s.setText("0");
         $a2s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $a2s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $a2s.setIconTextGap(2);
+        $a2s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a2s);
 
-        $a3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a3.setText("$a3");
         $a3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $a3.setPreferredSize(new java.awt.Dimension(0, 30));
+        $a3.setIconTextGap(2);
+        $a3.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a3);
 
-        $a3s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $a3s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $a3s.setText("0");
         $a3s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $a3s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $a3s.setIconTextGap(2);
+        $a3s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($a3s);
 
-        $t0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t0.setText("$t0");
         $t0.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t0.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t0.setIconTextGap(2);
+        $t0.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t0);
 
-        $t0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t0s.setText("0");
         $t0s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t0s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t0s.setIconTextGap(2);
+        $t0s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t0s);
 
-        $t1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t1.setText("$t1");
         $t1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t1.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t1.setIconTextGap(2);
+        $t1.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t1);
 
-        $t1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t1s.setText("0");
         $t1s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t1s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t1s.setIconTextGap(2);
+        $t1s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t1s);
 
-        $t2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t2.setText("$t2");
         $t2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t2.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t2.setIconTextGap(2);
+        $t2.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t2);
 
-        $t2s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t2s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t2s.setText("0");
         $t2s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t2s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t2s.setIconTextGap(2);
+        $t2s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t2s);
 
-        $t3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t3.setText("$t3");
         $t3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t3.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t3.setIconTextGap(2);
+        $t3.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t3);
 
-        $t3s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t3s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t3s.setText("0");
         $t3s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t3s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t3s.setIconTextGap(2);
+        $t3s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t3s);
 
-        $t4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t4.setText("$t4");
         $t4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t4.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t4.setIconTextGap(2);
+        $t4.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t4);
 
-        $t4s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t4s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t4s.setText("0");
         $t4s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t4s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t4s.setIconTextGap(2);
+        $t4s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t4s);
 
-        $t5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t5.setText("$t5");
         $t5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t5.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t5.setIconTextGap(2);
+        $t5.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t5);
 
-        $t5s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t5s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t5s.setText("0");
         $t5s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t5s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t5s.setIconTextGap(2);
+        $t5s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t5s);
 
-        $t6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t6.setText("$t6");
         $t6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t6.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t6.setIconTextGap(2);
+        $t6.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t6);
 
-        $t6s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t6s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t6s.setText("0");
         $t6s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t6s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t6s.setIconTextGap(2);
+        $t6s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t6s);
 
-        $t7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t7.setText("$t7");
         $t7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t7.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t7.setIconTextGap(2);
+        $t7.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t7);
 
-        $t7s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t7s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t7s.setText("0");
         $t7s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t7s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t7s.setIconTextGap(2);
+        $t7s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t7s);
 
-        $s0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s0.setText("$s0");
         $s0.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s0.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s0.setIconTextGap(2);
+        $s0.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s0);
 
-        $s0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s0s.setText("0");
         $s0s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s0s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s0s.setIconTextGap(2);
+        $s0s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s0s);
 
-        $s1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s1.setText("$s1");
         $s1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s1.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s1.setIconTextGap(2);
+        $s1.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s1);
 
-        $s1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s1s.setText("0");
         $s1s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s1s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s1s.setIconTextGap(2);
+        $s1s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s1s);
 
-        $s2.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s2.setText("$s2");
         $s2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s2.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s2.setIconTextGap(2);
+        $s2.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s2);
 
-        $s2s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s2s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s2s.setText("0");
         $s2s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s2s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s2s.setIconTextGap(2);
+        $s2s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s2s);
 
-        $s3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s3.setText("$s3");
         $s3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s3.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s3.setIconTextGap(2);
+        $s3.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s3);
 
-        $s3s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s3s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s3s.setText("0");
         $s3s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s3s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s3s.setIconTextGap(2);
+        $s3s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s3s);
 
-        $s4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s4.setText("$s4");
         $s4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s4.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s4.setIconTextGap(2);
+        $s4.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s4);
 
-        $s4s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s4s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s4s.setText("0");
         $s4s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s4s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s4s.setIconTextGap(2);
+        $s4s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s4s);
 
-        $s5.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s5.setText("$s5");
         $s5.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s5.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s5.setIconTextGap(2);
+        $s5.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s5);
 
-        $s5s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s5s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s5s.setText("0");
         $s5s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s5s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s5s.setIconTextGap(2);
+        $s5s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s5s);
 
-        $s6.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s6.setText("$s6");
         $s6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s6.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s6.setIconTextGap(2);
+        $s6.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s6);
 
-        $s6s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s6s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s6s.setText("0");
         $s6s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s6s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s6s.setIconTextGap(2);
+        $s6s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s6s);
 
-        $s7.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s7.setText("$s7");
         $s7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s7.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s7.setIconTextGap(2);
+        $s7.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s7);
 
-        $s7s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $s7s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $s7s.setText("0");
         $s7s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $s7s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $s7s.setIconTextGap(2);
+        $s7s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($s7s);
 
-        $t8.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t8.setText("$t8");
         $t8.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t8.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t8.setIconTextGap(2);
+        $t8.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t8);
 
-        $t8s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t8s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t8s.setText("0");
         $t8s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t8s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t8s.setIconTextGap(2);
+        $t8s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t8s);
 
-        $t9.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t9.setText("$t9");
         $t9.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t9.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t9.setIconTextGap(2);
+        $t9.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t9);
 
-        $t9s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $t9s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $t9s.setText("0");
         $t9s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $t9s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $t9s.setIconTextGap(2);
+        $t9s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($t9s);
 
-        $k0.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $k0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k0.setText("$k0");
         $k0.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $k0.setPreferredSize(new java.awt.Dimension(0, 30));
+        $k0.setIconTextGap(2);
+        $k0.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($k0);
 
-        $k0s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $k0s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k0s.setText("0");
         $k0s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $k0s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $k0s.setIconTextGap(2);
+        $k0s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($k0s);
 
-        $k1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $k1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k1.setText("$k1");
         $k1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $k1.setPreferredSize(new java.awt.Dimension(0, 30));
+        $k1.setIconTextGap(2);
+        $k1.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($k1);
 
-        $k1s.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $k1s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $k1s.setText("0");
         $k1s.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $k1s.setPreferredSize(new java.awt.Dimension(0, 30));
+        $k1s.setIconTextGap(2);
+        $k1s.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($k1s);
 
-        $gp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $gp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $gp.setText("$gp");
         $gp.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $gp.setPreferredSize(new java.awt.Dimension(0, 30));
+        $gp.setIconTextGap(2);
+        $gp.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($gp);
 
-        $gps.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $gps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $gps.setText("0");
         $gps.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $gps.setPreferredSize(new java.awt.Dimension(0, 30));
+        $gps.setIconTextGap(2);
+        $gps.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($gps);
 
-        $sp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $sp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $sp.setText("$sp");
         $sp.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $sp.setPreferredSize(new java.awt.Dimension(0, 30));
+        $sp.setIconTextGap(2);
+        $sp.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($sp);
 
-        $sps.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $sps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $sps.setText("0");
         $sps.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $sps.setPreferredSize(new java.awt.Dimension(0, 30));
+        $sps.setIconTextGap(2);
+        $sps.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($sps);
 
-        $fp.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $fp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $fp.setText("$fp");
         $fp.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $fp.setPreferredSize(new java.awt.Dimension(0, 30));
+        $fp.setIconTextGap(2);
+        $fp.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($fp);
 
-        $fps.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $fps.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $fps.setText("0");
         $fps.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $fps.setPreferredSize(new java.awt.Dimension(0, 30));
+        $fps.setIconTextGap(2);
+        $fps.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($fps);
 
-        $ra.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $ra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $ra.setText("$ra");
         $ra.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $ra.setPreferredSize(new java.awt.Dimension(0, 30));
+        $ra.setIconTextGap(2);
+        $ra.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($ra);
 
-        $ras.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         $ras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         $ras.setText("0");
         $ras.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        $ras.setPreferredSize(new java.awt.Dimension(0, 30));
+        $ras.setIconTextGap(2);
+        $ras.setPreferredSize(new java.awt.Dimension(0, 0));
         registers.add($ras);
 
         getContentPane().add(registers, java.awt.BorderLayout.WEST);
@@ -1027,9 +1037,20 @@ public class APP extends javax.swing.JFrame {
         jPanel1.add(counter_l);
 
         jButton1.setText("Executar");
+        jButton1.addActionListener(e -> {
+            compilerActionPerformed(e);
+            runrActionPerformed(e);
+        });
         jPanel1.add(jButton1);
 
         jButton2.setText("Proximo Passo");
+        jButton2.addActionListener(e -> {
+            if(compi != 1){
+                compilerActionPerformed(e);
+                compi = 1;
+            }
+            nextrActionPerformed(e);
+        });
         jPanel1.add(jButton2);
 
         text_area.add(jPanel1, java.awt.BorderLayout.PAGE_END);
