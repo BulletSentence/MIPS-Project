@@ -1,13 +1,8 @@
-addi ,$s0,$0,5 
-addi, $s1, $0 , 15
-sub, $s3, $s1, $s0
-addi ,$t0, $0, 10
-bne ,$s3, $t0, NotEqual
-addi, $a0, $0, 8
-addi,$t9,$a0,6
-slt, $t3, $a0, $t9
-j ,finish
-NotEqual:
-andi, $a0, $t0, 18
-ori ,$a0, $a0, 80
-finish:
+addi, $s1, $0, 1
+addi, $s2, $0, 2
+addi, $s3, $0, 3
+addi, $s4, $0, 4
+addi, $s5, $0, 5
+
+add, $t1, $s2, $s3
+sub, $t2, $s1, $s5
