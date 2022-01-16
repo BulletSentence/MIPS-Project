@@ -1,1 +1,12 @@
-﻿
+﻿Addi,$t9,$0,2
+Addi,$t5,$0,1
+Addi,$sp,$sp,4
+Addi,$sp,$sp,4
+Addi,$a0,$sp,2
+Sw,$a0,$sp,0
+Addi,$a0,$a0,-1
+Lw,$a0,$sp,4
+Addi,$sp,$sp,-4
+Add,$v0,$v0,$a0
+Lw,$ra,$sp,1
+Addi,$sp,$sp,-4
